@@ -53,7 +53,7 @@
                             required
                         >
                         <button type="button" class="password-toggle" id="passwordToggle">
-                            👁️
+                            <i class="fa-solid fa-eye"></i>
                         </button>
                     </div>
                     <div class="error-message" id="passwordError"></div>
@@ -201,7 +201,7 @@
         $('#passwordToggle').on('click', function () {
             let type = passwordInput.attr('type') === 'password' ? 'text' : 'password';
             passwordInput.attr('type', type);
-            $(this).text(type === 'password' ? '👁️' : '🙈');
+            $(this).html(type === 'password' ? '<i class="fa-solid fa-eye"></i>' : '<i class="fa-solid fa-eye-slash"></i>');
         });
 
         // ✅ Validate email
